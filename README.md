@@ -26,7 +26,7 @@ mkdir timesync.build; curl https://openlab.ncl.ac.uk/gitlab/dan.jackson/timesync
 ```
 -->
 
-`timesync` requires `.WAV` files -- if you need to convert `.CWA` to `.WAV` files, first use `omconvert` (remove `./` if under Windows):
+`timesync` requires `.WAV` files -- if you need to convert `.CWA` to `.WAV` files, first use [`omconvert`](https://github.com/digitalinteraction/omconvert/) (remove `./` if under Windows):
 
 ```bash
 ./omconvert master.cwa -out master.wav

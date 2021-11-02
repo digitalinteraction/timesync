@@ -2,16 +2,15 @@
 
 Open Movement One-Dimensional Long-term Time Series Data Synchronization
 
-Long term (e.g. 7-day) accelerometer measurements (e.g. from multiple sites on the same body).
+For general information on time and synchronization in AX devices, see the [FAQ](https://github.com/digitalinteraction/openmovement/blob/master/Docs/ax3/ax3-faq.md#synchronizing-data-between-devices-or-with-other-devices).
 
-Local oscillators with different frequencies and stability (in ppm) cause drift.
-
+This tool is designed for long term (e.g. 7-day) accelerometer measurements from multiple sites on the same body.  The local oscillators have slightly different frequencies and stability (in ppm) causing gradual drift.
 
 ## Usage
 
 The code can be compiled for Linux, Windows (native and *Bash on Ubuntu on Windows*), and Mac (untested).  
 
-Instructions for building from the repository in your terminal (for Windows native builds replace `make` with the `build` script):
+Steps for building from the repository in your terminal -- for Windows native builds, replace `make` with the `build` script, or consider a [release binary](https://github.com/digitalinteraction/timesync/releases/):
 
 ```bash
 git clone https://openlab.ncl.ac.uk/gitlab/dan.jackson/timesync
@@ -19,11 +18,13 @@ cd timesync/src/timesync
 make
 ```
 
+<!--
 Alternatively, on Linux or Mac (*XCode* required), you can use this single line command to build a `timesync` binary in the current directory:
 
 ```bash
 mkdir timesync.build; curl https://openlab.ncl.ac.uk/gitlab/dan.jackson/timesync/repository/master/archive.zip -o timesync.build/archive.zip; unzip timesync.build/archive.zip -d timesync.build; make -C timesync.build/timesync-*/src/timesync && cp timesync.build/timesync-*/src/timesync/timesync .
 ```
+-->
 
 `timesync` requires `.WAV` files -- if you need to convert `.CWA` to `.WAV` files, first use `omconvert` (remove `./` if under Windows):
 

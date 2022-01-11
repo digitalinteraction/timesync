@@ -1,10 +1,11 @@
 # Time Series Data Synchronization
 
-Open Movement One-Dimensional Long-term Time Series Data Synchronization
+Open Movement Long-term Time Series Data Synchronization
 
 For general information on time and synchronization in AX devices, see the [FAQ](https://github.com/digitalinteraction/openmovement/blob/master/Docs/ax3/ax3-faq.md#synchronizing-data-between-devices-or-with-other-devices).
 
-This tool is designed for long term (e.g. 7-day) accelerometer measurements from multiple sites on the same body.  The local oscillators have slightly different frequencies and stability (in ppm) causing gradual drift.
+For time series accelerometer measurements from multiple devices, each device's local oscillator will have slightly different frequencies and stability causing gradual drift.  This makes synchronizing measurements over a long term (e.g. multi-day) difficult.  If sensors are placed at multiple sites on the same body, each sensor might be expected to see some of the same overall body movements at a similar time.  This software attempts to resynchronize a ('dependent') timeseries data file against another reference ('master') file.
+
 
 ## Usage
 
